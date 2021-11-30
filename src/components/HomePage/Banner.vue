@@ -8,7 +8,7 @@
         mountains, far from the countries Vokalia and Consonantia, there live
         the blind texts.
       </p>
-        <button class="bg-red-500 px-6 py-3 rounded-full text-white text-xl my-12">Explore More...</button>
+        <button class="bg-pink-500 px-6 py-3 rounded-full text-white text-xl my-12">Explore More...</button>
     </div>
   </div>
 </template>
