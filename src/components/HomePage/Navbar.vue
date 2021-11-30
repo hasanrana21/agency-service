@@ -27,7 +27,7 @@
     @apply flex justify-between items-center px-24 py-6 text-white;
 }
 .menu{
-    @apply flex space-x-4;
+    @apply flex;
 }
 .menu li{
     @apply px-6 py-2 text-xl rounded font-normal hover:bg-green-600 transition cursor-pointer;

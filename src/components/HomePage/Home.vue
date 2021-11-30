@@ -5,6 +5,10 @@
       <Banner></Banner>
     </div>
     <FoodCategoryMain></FoodCategoryMain>
+    <DessertSection></DessertSection>
+    <FoodGallery></FoodGallery>
+    <Testimonials></Testimonials>
+    <Events></Events>
   </div>
 </template>
 
@@ -12,8 +16,12 @@
 import Navbar from "./Navbar.vue";
 import Banner from "./Banner.vue";
 import FoodCategoryMain from "./FoodCategory/FoodCategoryMain.vue";
+import DessertSection from "./DessertSection.vue";
+import FoodGallery from "./FoodGallery.vue";
+import Testimonials from "./Testimonials.vue";
+import Events from "./Events.vue";
 export default {
-  components: { Navbar, Banner, FoodCategoryMain },
+  components: { Navbar, Banner, FoodCategoryMain, DessertSection, FoodGallery, Testimonials, Events },
   data() {
     return {};
   },
