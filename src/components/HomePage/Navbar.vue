@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="z-10">
-            <h1 class="text-5xl font-semibold italic">The Restaurant</h1>
+            <h1 class="text-5xl font-semibold italic">The Restora</h1>
         </div>
         <div class="z-10">
             <ul class="menu">

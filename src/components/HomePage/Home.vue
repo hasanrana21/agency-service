@@ -9,6 +9,7 @@
     <FoodGallery></FoodGallery>
     <Testimonials></Testimonials>
     <Events></Events>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -20,8 +21,9 @@ import DessertSection from "./DessertSection.vue";
 import FoodGallery from "./FoodGallery.vue";
 import Testimonials from "./Testimonials.vue";
 import Events from "./Events.vue";
+import Footer from "./Footer.vue";
 export default {
-  components: { Navbar, Banner, FoodCategoryMain, DessertSection, FoodGallery, Testimonials, Events },
+  components: { Navbar, Banner, FoodCategoryMain, DessertSection, FoodGallery, Testimonials, Events, Footer },
   data() {
     return {};
   },
