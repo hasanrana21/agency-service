@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-screen-wrapper">
-      <Navbar></Navbar>
+      <!-- <Navbar></Navbar> -->
       <Banner></Banner>
     </div>
     <FoodCategoryMain></FoodCategoryMain>
@@ -9,21 +9,30 @@
     <FoodGallery></FoodGallery>
     <Testimonials></Testimonials>
     <Events></Events>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
+// import Navbar from "./Navbar.vue";
 import Banner from "./Banner.vue";
 import FoodCategoryMain from "./FoodCategory/FoodCategoryMain.vue";
 import DessertSection from "./DessertSection.vue";
 import FoodGallery from "./FoodGallery.vue";
 import Testimonials from "./Testimonials.vue";
 import Events from "./Events.vue";
-import Footer from "./Footer.vue";
+// import Footer from "./Footer.vue";
 export default {
-  components: { Navbar, Banner, FoodCategoryMain, DessertSection, FoodGallery, Testimonials, Events, Footer },
+  components: {
+    // Navbar,
+    Banner,
+    FoodCategoryMain,
+    DessertSection,
+    FoodGallery,
+    Testimonials,
+    Events,
+    // Footer,
+  },
   data() {
     return {};
   },
@@ -44,6 +53,6 @@ export default {
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
-  /* background-attachment: fixed; */
+  height: 112vh;
 }
 </style>

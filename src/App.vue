@@ -1,15 +1,21 @@
 <template>
-  <Home></Home>
+  <div id="nav">
+    <Navbar></Navbar>
+    <router-view></router-view>
+    <Footer></Footer>
+  </div>
 </template>
 
 <script>
-import Home from './components/HomePage/Home.vue'
+import Navbar from "./components/HomePage/Navbar.vue";
+import Footer from "./components/HomePage/Footer.vue";
 
 export default {
   name: 'App',
   components: {
-    Home
-  }
+    Navbar,
+    Footer
+}
 }
 </script>
 

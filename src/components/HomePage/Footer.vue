@@ -22,7 +22,7 @@
                 </ul>
             </div>
             <div class="col-span-4 p-6">
-                <h3 class="text-center text-2xl text-white">Find us in social media</h3>
+                <h3 class="text-center text-2xl text-white">Contact Us</h3>
                 <div class="social-icon text-center py-6">
                     <span>Facebook</span>
                     <span>Instagram</span>
