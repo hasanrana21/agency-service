@@ -11,20 +11,31 @@
             language ocean.
           </p>
           <h3 class="text-3xl text-pink-500">$200.99</h3>
-          <div class="h-44 flex flex-wrap content-end justify-center text-center py-8 ">
-            <button
-              class="
-                bg-pink-500
-                text-2xl
-                px-20
-                py-3
-                text-white
-                font-semibold
-                rounded-full
-              "
-            >
-              ADD TO CART
-            </button>
+          <div
+            class="
+              h-44
+              flex flex-wrap
+              content-end
+              justify-center
+              text-center
+              py-8
+            "
+          >
+            <router-link to="/addToCart">
+              <button
+                class="
+                  bg-pink-500
+                  text-2xl
+                  px-20
+                  py-3
+                  text-white
+                  font-semibold
+                  rounded-full
+                "
+              >
+                ADD TO CART
+              </button>
+            </router-link>
           </div>
         </div>
       </div>

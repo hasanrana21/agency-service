@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/HomePage/Home.vue'
 import Checkout from '../components/PlaceOrder/Checkout.vue'
 import AddToCart from '../components/PlaceOrder/AddToCart.vue'
+import OrderCompleted from '../components/PlaceOrder/OrderCompleted.vue'
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/addToCart',
     name: 'AddToCart',
     component: AddToCart
+  },
+  {
+    path: '/orderCompleted',
+    name: 'OrderCompleted',
+    component: OrderCompleted
   }
 ]
 
