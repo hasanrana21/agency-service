@@ -1,16 +1,17 @@
 <template>
   <div class="px-40 py-12 bg-pink-100 h-screen">
-    <div class="grid grid-cols-12 gap-6 py-16">
+    <div
+      v-for="(item, index) in itemData"
+      :key="index"
+      class="grid grid-cols-12 gap-6 py-16"
+    >
       <div class="col-span-6 flex items-center">
         <div>
-          <h3 class="text-4xl font-semibold py-2">Guest Chef Nihgt Party</h3>
+          <h3 class="text-4xl font-semibold py-2">{{ item.strCategory }}</h3>
           <p class="text-xl py-6">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.
+            {{ item.strCategoryDescription }}
           </p>
-          <h3 class="text-3xl text-pink-500">$200.99</h3>
+          <h3 class="text-2xl text-pink-500">$200.99</h3>
           <div
             class="
               h-44
@@ -25,8 +26,8 @@
               <button
                 class="
                   bg-pink-500
-                  text-2xl
-                  px-20
+                  text-base
+                  px-16
                   py-3
                   text-white
                   font-semibold
@@ -42,7 +43,7 @@
 
       <div class="col-span-6 h-full w-full flex justify-end">
         <img
-          src="https://preview.colorlib.com/theme/meal2/images/xparty_2.jpg.pagespeed.ic.VGd3fPR10T.webp"
+          :src="item.strCategoryThumb"
           alt="events"
           class="h-96 rounded-xl"
         />
@@ -54,6 +55,25 @@
 <script>
 export default {
   name: "Checkout",
+  data() {
+    return {
+      itemData: [],
+    };
+  },
+  mounted() {
+    this.itemInfo();
+  },
+  methods: {
+    itemInfo() {
+      fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+        .then((res) => res.json())
+        .then((data) => {
+          this.itemData = data.categories.filter(
+            (item) => item.idCategory === this.$route.params.id
+          );
+        });
+    },
+  },
 };
 </script>
 
@@ -62,6 +82,6 @@ ul {
   @apply py-4;
 }
 ul li {
-  @apply text-xl py-1;
+  @apply text-base py-1;
 }
 </style>

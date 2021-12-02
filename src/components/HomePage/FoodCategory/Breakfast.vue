@@ -6,7 +6,7 @@
         <img
           :src="breakfast.strCategoryThumb"
           alt="breakfast"
-          class="rounded-lg w-full"
+          class="rounded-lg w-full h-auto"
         />
         <div class="px-4 py-2">
           <div>
@@ -14,14 +14,14 @@
             <h6 class="text-2xl">$21.00</h6>
           </div>
           <div class="text-center my-6">
-            <router-link to="/checkout">
+            <router-link :to="`/checkout/${breakfast.idCategory}`">
               <button
                 @click="getBreakfast"
                 class="
                   bg-pink-500
                   text-lg
-                  px-10
-                  py-2
+                  px-7
+                  py-1
                   text-white
                   font-semibold
                   rounded-full

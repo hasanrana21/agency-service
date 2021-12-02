@@ -1,6 +1,6 @@
 <template>
   <div class="px-24 py-6 bg-gray-100">
-    <h3 class="text-5xl font-semibold py-12 text-center">
+    <h3 class="text-4xl font-semibold py-12 text-center">
       Satisfied <span class="text-pink-500">Customers</span>
     </h3>
     <div class="grid grid-cols-12 gap-4">
@@ -13,8 +13,8 @@
           />
         </div>
         <div>
-          <h5 class="text-2xl font-semibold py-2">Alex Markendi</h5>
-          <p class="text-xl">
+          <h5 class="text-xl font-semibold py-2">Alex Markendi</h5>
+          <p class="text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             tenetur eligendi facilis deleniti, vero esse atque rerum natus,
             eveniet iure quis quasi, numquam illum ea laboriosam fugit quos fuga
@@ -31,8 +31,8 @@
           />
         </div>
         <div>
-          <h5 class="text-2xl font-semibold py-2">Alex Markendi</h5>
-          <p class="text-xl">
+          <h5 class="text-xl font-semibold py-2">Alex Markendi</h5>
+          <p class="text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             tenetur eligendi facilis deleniti, vero esse atque rerum natus,
             eveniet iure quis quasi, numquam illum ea laboriosam fugit quos fuga
@@ -49,8 +49,8 @@
           />
         </div>
         <div>
-          <h5 class="text-2xl font-semibold py-2">Alex Markendi</h5>
-          <p class="text-xl">
+          <h5 class="text-xl font-semibold py-2">Alex Markendi</h5>
+          <p class="text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             tenetur eligendi facilis deleniti, vero esse atque rerum natus,
             eveniet iure quis quasi, numquam illum ea laboriosam fugit quos fuga

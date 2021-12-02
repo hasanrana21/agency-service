@@ -3,6 +3,7 @@ import Home from '../components/HomePage/Home.vue'
 import Checkout from '../components/PlaceOrder/Checkout.vue'
 import AddToCart from '../components/PlaceOrder/AddToCart.vue'
 import OrderCompleted from '../components/PlaceOrder/OrderCompleted.vue'
+import Login from '../components/LoginPage/Login.vue'
 
 const routes = [
   {
@@ -11,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/checkout',
+    path: '/checkout/:id',
     name: 'Checkout',
     component: Checkout
   },
@@ -24,7 +25,12 @@ const routes = [
     path: '/orderCompleted',
     name: 'OrderCompleted',
     component: OrderCompleted
-  }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
 ]
 
 const router = createRouter({

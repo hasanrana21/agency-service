@@ -1,6 +1,6 @@
 <template>
     <div class="px-24 py-6 bg-pink-100">
-      <h3 class="text-5xl font-semibold py-12 text-center">Food <span class="text-pink-500">Gallery</span></h3>
+      <h3 class="text-4xl font-semibold py-12 text-center">Food <span class="text-pink-500">Gallery</span></h3>
       <div class="grid grid-cols-12 gap-x-6 gap-y-10">
           <div class="col-span-3 gallery-item">
               <img src="https://preview.colorlib.com/theme/meal2/images/ximg_1.jpg.pagespeed.ic.VpbnsnaQH0.webp" alt="restora" class="rounded-xl">

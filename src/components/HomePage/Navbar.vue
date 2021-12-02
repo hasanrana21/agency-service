@@ -26,17 +26,6 @@
 .navbar{
     @apply flex justify-between items-center px-24 py-6 text-white;
 }
-/* .navbar::before{
-position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-  height: 13vh;
-} */
 .menu{
     @apply flex;
 }

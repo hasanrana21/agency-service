@@ -25,7 +25,7 @@
               <button
                 type="submit"
                 class="
-                  text-xl
+                  text-base
                   bg-gray-700
                   font-semibold
                   text-white
@@ -54,9 +54,9 @@
 
 <style scoped>
 label {
-  @apply text-lg px-2;
+  @apply text-base px-2;
 }
 input {
-  @apply text-lg px-2 py-2 w-96 mt-1 mb-6 border-2 border-black rounded-lg w-5/6;
+  @apply text-base px-2 py-2 w-96 mt-1 mb-6 border-2 border-black rounded-lg w-5/6;
 }
 </style>
