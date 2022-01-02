@@ -4,6 +4,10 @@ import Checkout from '../components/PlaceOrder/Checkout.vue'
 import AddToCart from '../components/PlaceOrder/AddToCart.vue'
 import OrderCompleted from '../components/PlaceOrder/OrderCompleted.vue'
 import Login from '../components/LoginPage/Login.vue'
+import ContactUs from '../components/ContactUs.vue'
+import UpdateForm from '../components/UpdateForm.vue'
+import CrudBackend from '../components/about-us-page/CrudBackend.vue'
+import ShowFood from '../components/about-us-page/ShowFood.vue'
 
 const routes = [
   {
@@ -31,6 +35,26 @@ const routes = [
     name: 'Login',
     component: Login
   },
+  {
+    path: '/contactUs',
+    name: 'ContactUs',
+    component: ContactUs
+  },
+  {
+    path: '/update-form',
+    name: 'UpdateForm',
+    component: UpdateForm
+  },
+  {
+    path: '/crud-backend',
+    name: 'CrudBackend',
+    component: CrudBackend
+  },
+  {
+    path: '/show-food',
+    name: 'ShowFood',
+    component: ShowFood
+  }
 ]
 
 const router = createRouter({

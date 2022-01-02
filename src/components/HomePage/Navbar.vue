@@ -7,14 +7,16 @@
             <ul class="menu">
                 <router-link to="/"> <li>Home</li> </router-link>
                 <router-link to="/projects"> <li>Projects</li> </router-link>
-                <router-link to="/aboutUs"> <li>About Us</li> </router-link>
+                <router-link to="/crud-backend"> <li>About Us</li> </router-link>
                 <router-link to="/contactUs"> <li>Contact Us</li> </router-link>
                 <router-link to="/login"> <li>Login</li> </router-link>
+                <router-link to="/show-food"> <li>Foods</li> </router-link>
+                <router-link to="/admin"> <li>Admin</li> </router-link>
             </ul>
         </div>
         <div class="z-10">
             <button class="bg-pink-500 px-6 py-3 rounded-full font-bold">
-                BOOK A TABLE
+                <a href="https://preview.colorlib.com/#meal2" target="_blank">BOOK A TABLE</a>
             </button>
         </div>
     </div>

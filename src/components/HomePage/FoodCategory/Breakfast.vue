@@ -53,7 +53,7 @@ export default {
       fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.categories);
+          // console.log(data.categories);
           this.breakfastItems = data.categories;
         });
     },
