@@ -83,5 +83,4 @@ input[type="submit"]:active {
   border: 1px solid transparent;
   opacity: 0.8;
 }
-
 </style>

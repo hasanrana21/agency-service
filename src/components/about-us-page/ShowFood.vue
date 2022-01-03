@@ -44,12 +44,13 @@ export default {
     handleDelete(id) {
       const fooditem = this.foodCollection.find((food) => {
         if (food._id === id) {
-            axios.delete(`http://localhost:5050/deleteFood/${food._id}`)
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
+          axios
+            .delete(`http://localhost:5050/deleteFood/${food._id}`)
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err));
         }
       });
-      
+      console.log(fooditem);
     },
   },
 };
