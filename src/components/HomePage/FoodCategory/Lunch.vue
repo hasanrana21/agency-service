@@ -8,17 +8,17 @@
         class="col-span-4 shadow-lg rounded-lg"
       >
         <img
-          :src="lunch.imageURL"
+          :src="lunch.foodImg"
           alt="breakfast"
-          class="rounded-lg w-4/6 h-6/6 mx-auto"
+          class="rounded-lg h-52 mx-auto"
         />
         <div class="px-4 py-2">
           <div>
-            <h4 class="text-2xl py-2">{{ lunch.name }}</h4>
-            <h6 class="text-2xl">$21.00</h6>
+            <h4 class="text-2xl py-2">{{ lunch.foodName }}</h4>
+            <h6 class="text-2xl">$ {{ lunch.price }}</h6>
           </div>
           <div class="text-center my-6">
-            <router-link to="/checkout">
+            <router-link :to="`/checkout/${lunch._id}`">
               <button
                 class="
                   bg-pink-500
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Lunch",
   data() {
@@ -53,15 +54,16 @@ export default {
   },
   methods: {
     getLunchItems() {
-      fetch("https://young-savannah-03336.herokuapp.com/getFoods")
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          this.lunchItems = data.filter((item) => item.foodType === "Lunch");
+      axios
+        .get("http://localhost:3000/get-all-foods")
+        .then((res) => {
+          // console.log(res);
+          this.lunchItems = res.data.filter(
+            (item) => item.category === "lunch"
+          );
           console.log(this.lunchItems);
-        });
-      //  this.getLunch = this.lunchItems.filter(item => item.foodType === 'Lunch')
-      // console.log(this.getLunch);
+        })
+        .catch((err) => console.log(err));
     },
   },
 };

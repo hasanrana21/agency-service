@@ -3,7 +3,7 @@
     <div class="text-center z-10" style="width: 40%">
       <h6 class="text-lg font-semibold">ENJOY YOUR HEALTHY DELICIOUS MEAL</h6>
       <h1 class="text-7xl py-6 font-semibold tracking-widest">
-        Treat Yourself
+        Explore Yourself
       </h1>
       <p class="text-2xl leading-9 tracking-wider">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati enim

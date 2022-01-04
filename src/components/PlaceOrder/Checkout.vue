@@ -7,11 +7,11 @@
     >
       <div class="col-span-6 flex items-center">
         <div>
-          <h3 class="text-4xl font-semibold py-2">{{ item.strCategory }}</h3>
+          <h3 class="text-4xl font-semibold py-2">{{ item.foodName }}</h3>
           <p class="text-xl py-6">
-            {{ item.strCategoryDescription }}
+            {{ item.description }}
           </p>
-          <h3 class="text-2xl text-pink-500">$200.99</h3>
+          <h3 class="text-2xl text-pink-500">$ {{ item.price }}</h3>
           <div
             class="
               h-44
@@ -42,17 +42,14 @@
       </div>
 
       <div class="col-span-6 h-full w-full flex justify-end">
-        <img
-          :src="item.strCategoryThumb"
-          alt="events"
-          class="h-96 rounded-xl"
-        />
+        <img :src="item.foodImg" alt="events" class="h-96 rounded-xl" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Checkout",
   data() {
@@ -65,13 +62,14 @@ export default {
   },
   methods: {
     itemInfo() {
-      fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
-        .then((res) => res.json())
-        .then((data) => {
-          this.itemData = data.categories.filter(
-            (item) => item.idCategory === this.$route.params.id
+      axios
+        .get("http://localhost:3000/get-all-foods")
+        .then((res) => {
+          this.itemData = res.data.filter(
+            (item) => item._id === this.$route.params.id
           );
-        });
+        })
+        .catch((err) => console.log(err));
     },
   },
 };
