@@ -18,6 +18,7 @@
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>
           <option value="dessert">Desserts</option>
+          <option value="drinks">Drinks</option>
         </select>
       </div>
       <div>

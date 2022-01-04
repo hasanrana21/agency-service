@@ -32,7 +32,34 @@
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      dinner: [],
+    };
+  },
+  mounted() {
+    this.dinnerData();
+  },
+  methods: {
+    dinnerData() {
+      axios
+        .get("http://localhost:3000/get-all-foods")
+        .then((res) => {
+          // console.log(res.data);
+          this.dinner = res.data.filter(
+            (item) => item.category === "breakfast"
+          );
+          console.log(this.dinner);
+        })
+        .catch((err) => console.log(err));
+    },
+  },
+};
+</script>
