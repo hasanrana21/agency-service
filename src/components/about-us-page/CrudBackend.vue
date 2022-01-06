@@ -31,6 +31,11 @@
         <button @click="handleDelete(index)">DELETE</button>
       </div> -->
     </form>
+
+    <div v-for="(item, index) in fruitsFromVuex" :key="index">
+      <h3>Fruits Name: {{ item.name }}</h3>
+      <p>Description: {{ item.description }}</p>
+    </div>
   </section>
 </template>
 
@@ -44,7 +49,11 @@ export default {
       description: "",
     };
   },
-
+  computed: {
+    fruitsFromVuex() {
+      return this.$store.state.foods;
+    },
+  },
   methods: {
     handleSubmit() {
       const foodInfo = {

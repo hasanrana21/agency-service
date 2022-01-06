@@ -6,18 +6,18 @@
     <div>
       <div class="grid grid-cols-12 gap-4">
         <div
-          v-for="(item, index) in foodCollection"
+          v-for="(item, index) in allFoods"
           :key="index"
           class="col-span-3 p-6 mx-2 border-2 bg-yellow-300 rounded-xl"
         >
           <h3 class="text-2xl text-white text-green-500">
-            {{ item.foodName }}
+            {{ item.name }}
           </h3>
           <p class="text-lg">{{ item.description }}</p>
 
           <div class="flex justify-between px-4 pt-8 food-item">
             <button>EDIT</button>
-            <button @click="handleDelete(item._id)">DELETE</button>
+            <button @click="handleDelete(7)">DELETE</button>
           </div>
         </div>
       </div>
@@ -35,10 +35,15 @@ export default {
     };
   },
   mounted() {
-    axios.get("http://localhost:5050/allFoods").then((res) => {
-      this.foodCollection = res.data;
-      console.log(this.foodCollection);
-    });
+    // axios.get("http://localhost:5050/allFoods").then((res) => {
+    //   this.foodCollection = res.data;
+    //   console.log(this.foodCollection);
+    // });
+  },
+  computed: {
+    allFoods() {
+      return this.$store.state.foods;
+    },
   },
   methods: {
     handleDelete(id) {
